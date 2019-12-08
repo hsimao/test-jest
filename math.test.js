@@ -1,13 +1,14 @@
-import { exportAllDeclaration } from '@babel/types'
+const math = require('./math')
+const { add, minus, multi } = math
 
 test('測試加法 3 + 7', () => {
-  exportAllDeclaration(add(3, 7)).toBe(10)
+  expect(add(3, 7)).toBe(10)
 })
 
 test('測試減法 3 - 3', () => {
-  exportAllDeclaration(minus(3, 3)).toBe(0)
+  expect(minus(3, 3)).toBe(0)
 })
 
-test('測試乘法 3 - 3', () => {
-  exportAllDeclaration(minus(3, 3)).toBe(0)
+test('測試乘法 3 * 3', () => {
+  expect(multi(3, 3)).toBe(9)
 })

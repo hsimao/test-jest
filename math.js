@@ -10,8 +10,10 @@ function multi(a, b) {
   return a * b
 }
 
-module.exports = {
-  add,
-  minus,
-  multi,
-}
+try {
+  module.exports = {
+    add,
+    minus,
+    multi,
+  }
+} catch (e) {}
